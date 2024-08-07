@@ -12,15 +12,12 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.GridLayout;
-import java.awt.Image;
-
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import BusinessLogic.UsuarioBL;
 import UserInterface.CustomerControl.SebButton;
 import UserInterface.CustomerControl.SebLabel;
 
@@ -52,8 +49,6 @@ public class PokeStoragePanel extends JPanel {
         btnLista.setPreferredSize(new Dimension(300, 50));
         btnHistorial.setPreferredSize(new Dimension(300, 50));
         btnRegresar = new SebButton("Regresar");
-        MochilaPokemon mochilaPokemon = new MochilaPokemon();
-
     }
 
     private void setupLayout() {
@@ -187,9 +182,4 @@ public class PokeStoragePanel extends JPanel {
         super.paintComponent(g);
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
-
-    // @Override
-    // public Dimension getPreferredSize() {
-    // return new Dimension(600, 400); // Establece el tamaño preferido del panel
-    // }
 }
