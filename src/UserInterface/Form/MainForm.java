@@ -24,13 +24,17 @@ import UserInterface.CustomerControl.SebLabel;
 public class MainForm extends JPanel {
     SebButton btonIniciarSesion = new SebButton("Iniciar Sesión"),
             btonCrearCuenta = new SebButton("Crear Cuenta");
-    private JLabel background; // Etiqueta para la imagen de fondo
+    private JLabel background; 
+
+    SebButton btonObjetivo = new SebButton("Objetivo");
 
     public MainForm() {
         customizeComponent();
         btonIniciarSesion.addActionListener(e -> iniciarSesionPnl());
 
         btonCrearCuenta.addActionListener(e -> btonCrearCuentaClick());
+
+        btonObjetivo.addActionListener(e -> mostrarImagen());
     }
 
     private void iniciarSesionPnl() {
@@ -47,8 +51,7 @@ public class MainForm extends JPanel {
     }
 
     private void btonCrearCuentaClick() {
-        // Utiliza JOptionPane para crear una ventana emergente con los componentes
-        // necesarios
+
         JPanel panerCrear = new JPanel(new GridLayout(4, 2, 5, 5));
 
         SebLabel lblNombre = new SebLabel("Nombre:");
@@ -81,19 +84,15 @@ public class MainForm extends JPanel {
         panerCrear.add(lblEdad);
         panerCrear.add(cmbEdad);
 
-        // Mostrar la ventana emergente de entrada con los componentes
         int opcion = JOptionPane.showConfirmDialog(null, panerCrear, "Crear Usuario", JOptionPane.OK_CANCEL_OPTION);
 
-        // Verificar si se ha presionado "OK"
         if (opcion == JOptionPane.OK_OPTION) {
-            // Verificar que los campos no estén vacíos
             if (txtNombre.getText().isEmpty() || txtContraseña.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Los campos Nombre y Contraseña no pueden estar vacíos", "Error",
                         JOptionPane.ERROR_MESSAGE);
-                return; // Salir del método sin procesar los datos
+                return; 
             }
 
-            // Aquí puedes procesar los datos ingresados por el usuario
             String nombre = txtNombre.getText();
             String contraseña = txtContraseña.getText();
             String sexo = cmbSexo.getSelectedItem().toString();
@@ -121,9 +120,7 @@ public class MainForm extends JPanel {
         }
     }
 
-    // Método para crear un archivo de texto con el nombre del usuario
     private void crearArchivoUsuario(String nombreUsuario) {
-        // Nombre del archivo basado en el nombre del usuario
         String nombreArchivo = nombreUsuario + ".txt";
 
         // Crear el archivo
@@ -135,31 +132,33 @@ public class MainForm extends JPanel {
         }
     }
 
-    private void customizeComponent() {
-        setLayout(new BorderLayout()); // Establece el diseño del MainForm como BorderLayout
+    private void mostrarImagen() {
+        String rutaImagen = "src\\Resource\\Img\\objetivo.png";
+        
+        ImageIcon imagen = new ImageIcon(rutaImagen);
+        
+        JOptionPane.showMessageDialog(this, new JLabel(imagen), "Objetivo POKE-STORAGE", JOptionPane.PLAIN_MESSAGE);
+    }
 
-        // Carga la imagen de fondo
-        ImageIcon backgroundImage = new ImageIcon("src\\Resource\\Img\\Main.png"); // Cambia la ruta por la ubicación de
-                                                                                   // tu imagen
+    private void customizeComponent() {
+        setLayout(new BorderLayout()); 
+
+        ImageIcon backgroundImage = new ImageIcon("src\\Resource\\Img\\main2.png"); 
+                                                                                  
         background = new JLabel(backgroundImage);
 
-        // Establece el tamaño del fondo para que coincida con el tamaño del MainForm
         background.setPreferredSize(new Dimension(getWidth(), getHeight()));
 
-        // Establece el diseño del fondo como BorderLayout para que cubra todo el
-        // MainForm
         background.setLayout(new BorderLayout());
 
-        // Agrega los botones al fondo
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 55, 280));
-        buttonsPanel.setOpaque(false); // Hace que el panel de botones sea transparente
+        buttonsPanel.setOpaque(false); 
         buttonsPanel.add(btonIniciarSesion);
         buttonsPanel.add(btonCrearCuenta);
+        buttonsPanel.add(btonObjetivo); 
 
-        // Agrega el panel de botones al centro del fondo
         background.add(buttonsPanel, BorderLayout.CENTER);
 
-        // Agrega el fondo al MainForm
         add(background);
     }
 }
