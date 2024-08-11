@@ -184,39 +184,55 @@ public class PokeStoragePanel extends JPanel {
         JPanel panerCrear = new JPanel(new GridLayout(2, 2, 5, 5));
 
         SebLabel lblNombre = new SebLabel("Nombre del Pokémon:");
-        JTextField txtNombre = new JTextField(20);
+
+        // Crear las opciones de los 10 Pokémon más famosos
+        String[] nombresPokemon = {
+                "Pikachu", "Charizard", "Bulbasaur", "Squirtle", "Jigglypuff", "Meowth", "Psyduck",
+                "Snorlax", "Gengar", "Eevee", "Mewtwo", "Lugia", "Ho-Oh", "Celebi", "Torchic",
+                "Mudkip", "Treecko", "Blaziken", "Gardevoir", "Metagross", "Rayquaza", "Lucario",
+                "Garchomp", "Infernape", "Empoleon", "Torterra", "Dialga", "Palkia", "Giratina",
+                "Darkrai", "Zoroark", "Chandelure", "Greninja", "Talonflame", "Sylveon", "Tyrantrum",
+                "Goodra", "Noivern", "Xerneas", "Yveltal", "Zygarde", "Rowlet", "Litten", "Popplio",
+                "Decidueye", "Incineroar", "Primarina", "Lycanroc", "Toxtricity", "Dragapult",
+                "Cinderace", "Rillaboom", "Inteleon", "Zacian", "Zamazenta", "Eternatus", "Urshifu"
+        };
+
+        JComboBox<String> cmbNombre = new JComboBox<>(nombresPokemon);
 
         SebLabel lblPoder = new SebLabel("Poder:");
-        // Crear las opciones de poder del 1000 al 2500 en saltos de 100
-        Integer[] poderes = new Integer[16];
-        for (int i = 0; i < poderes.length; i++) {
-            poderes[i] = 1000 + (i * 100);
-        }
-        JComboBox<Integer> cmbPoder = new JComboBox<>(poderes);
+        JTextField txtPoder = new JTextField(10);
 
         // Agregar los componentes al panel
         panerCrear.add(lblNombre);
-        panerCrear.add(txtNombre);
+        panerCrear.add(cmbNombre);
         panerCrear.add(lblPoder);
-        panerCrear.add(cmbPoder);
+        panerCrear.add(txtPoder);
 
         // Mostrar la ventana emergente de entrada con los componentes
         int opcion = JOptionPane.showConfirmDialog(null, panerCrear, "Registrar Pokémon", JOptionPane.OK_CANCEL_OPTION);
 
         // Verificar si se ha presionado "OK"
         if (opcion == JOptionPane.OK_OPTION) {
-            // Verificar que el campo de nombre no esté vacío
-            if (txtNombre.getText().isEmpty()) {
-                JOptionPane.showMessageDialog(null, "El campo Nombre del Pokémon no puede estar vacío", "Error",
+            // Validar el campo de poder para que no sea negativo y no contenga texto
+            String poderTexto = txtPoder.getText();
+            int poder;
+            try {
+                poder = Integer.parseInt(poderTexto);
+                if (poder < 0) {
+                    JOptionPane.showMessageDialog(null, "El poder no puede ser negativo", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                    return; // Salir del método sin procesar los datos
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor ingrese un número válido para el poder", "Error",
                         JOptionPane.ERROR_MESSAGE);
                 return; // Salir del método sin procesar los datos
             }
 
-            // Obtener los datos ingresados
-            String nombre = txtNombre.getText();
-            Integer poder = (Integer) cmbPoder.getSelectedItem();
+            // Obtener el nombre seleccionado y el poder ingresado
+            String nombre = (String) cmbNombre.getSelectedItem();
 
-            // Aquí los datos del Pokémon
+            // Mostrar los datos del Pokémon registrado
             JOptionPane.showMessageDialog(null, "Pokémon registrado:\nNombre: " + nombre + "\nPoder: " + poder,
                     "Éxito", JOptionPane.INFORMATION_MESSAGE);
 
