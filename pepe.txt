@@ -1,3 +1,0 @@
-pikachu 1200,
-ala 1700,
-Squirtle 123,

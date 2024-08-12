@@ -1,6 +1,7 @@
 package UserInterface.Form;
 
 import javax.swing.*;
+import javax.swing.text.BadLocationException;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
@@ -72,7 +73,7 @@ public class ListaPokemon extends JPanel {
             }
         };
         centerPanel.setBackground(new Color(211, 211, 211, 150));
-        centerPanel.setPreferredSize(new Dimension(300, 200));
+        centerPanel.setPreferredSize(new Dimension(300, 300));
         centerPanel.add(new JScrollPane(textPane), BorderLayout.CENTER);
 
         // Panel contenedor principal con la imagen de fondo
@@ -141,11 +142,29 @@ public class ListaPokemon extends JPanel {
 
     private void displayCurrentPokemon() {
         if (current != null) {
-            textPane.setText(current.getInfo());
+            // Dividimos la cadena por espacio
+            String[] datos = current.getInfo().trim().split(" ");
+            String nombre = datos[0].trim(); // Primer elemento es el nombre
+            String poder = datos[1].replace(",", "").trim(); // Segundo elemento es el poder
+            
+            // Cargar la imagen del Pokémon
+            ImageIcon imagenPokemon = cargarImagenPokemon(nombre);
+            
+            if (imagenPokemon.getIconWidth() > 0) {
+                // Mostrar el nombre y poder del Pokémon junto con la imagen
+                textPane.setText(nombre + " (Poder: " + poder + ")" + "\n");
+                textPane.setCaretPosition(textPane.getDocument().getLength());
+                textPane.insertIcon(imagenPokemon);
+            } else {
+                // Mostrar un mensaje si no se encuentra la imagen
+                textPane.setText("No se encontró la imagen de " + nombre + "\nPoder: " + poder);
+            }
         } else {
+            // Mensaje si no hay más Pokémones en la lista
             textPane.setText("No hay más Pokémones en la lista.");
         }
     }
+
 
     private void regresar() {
         try {
@@ -230,4 +249,23 @@ public class ListaPokemon extends JPanel {
             }
         }
     }
+
+    private ImageIcon cargarImagenPokemon(String nombre) {
+        // Usa el ClassLoader para cargar el recurso
+        String rutaImagen = "/Resource/Img/" + nombre.toLowerCase() + ".png";
+        java.net.URL url = getClass().getResource(rutaImagen);
+    
+        if (url != null) {
+            return new ImageIcon(url);
+        } else {
+            System.err.println("Imagen no encontrada: " + rutaImagen);
+            return null; // o una imagen por defecto
+        }
+    }
+
+    // private ImageIcon cargarImagenPokemon(String nombre) {
+    //     String rutaImagen = "src\\Resource\\Img\\" + nombre.toLowerCase() + ".png";
+    //     return new ImageIcon(rutaImagen);
+    // }
+    
 }
