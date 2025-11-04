@@ -58,3 +58,4 @@ public class SebLabel extends JLabel {
 }
 
 // GM-4 subtarea: GM-7 Diseño visual
+// GM-4 Formulario registro
