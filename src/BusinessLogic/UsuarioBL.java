@@ -57,3 +57,4 @@ public class UsuarioBL {
 // GM-9 subtarea: GM-10 Guardar nuevo usuario
 
 // GM-9 subtarea: GM-11 Manejo de error si un usuario ya existe
+
