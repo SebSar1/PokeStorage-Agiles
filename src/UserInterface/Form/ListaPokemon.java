@@ -266,3 +266,4 @@ public class ListaPokemon extends JPanel {
 }
 // GM-55 Implementar fallback para carga de imágenes
 
+// GM-38 Clase lista y metodos
