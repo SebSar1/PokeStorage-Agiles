@@ -162,3 +162,5 @@ public class MainForm extends JPanel {
         add(background);
     }
 }
+
+// GM-15 Implementación Pruebas de inicio de sesión
