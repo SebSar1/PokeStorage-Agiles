@@ -1,10 +1,3 @@
-/**
-/*-------------------------------------------------------------\
-|  Copyright (©) 2K24 EPN-FIS. All rights reserved.            |
-|  sebastian.sarasti01@epn.edu.ec PROPRIETARY/CONFIDENTIAL.    |
-|  Use is subject to license terms.       Sebastian Sarasti    |
-\--------------------------------------------------------------\
- */
 package UserInterface.CustomerControl;
 
 import java.awt.Color;

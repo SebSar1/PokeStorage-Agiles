@@ -1,4 +1,3 @@
-
 package UserInterface.Form;
 
 import java.awt.BorderLayout;
@@ -23,7 +22,6 @@ import javax.swing.text.StyledDocument;
 import javax.swing.text.BadLocationException;
 
 import UserInterface.CustomerControl.SebButton;
-
 
 
 public class HistorialPanel extends JPanel {

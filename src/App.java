@@ -1,11 +1,3 @@
-
-/**
-/*-------------------------------------------------------------\
-|  Copyright (©) 2K24 EPN-FIS. All rights reserved.            |
-|  sebastian.sarasti01@epn.edu.ec PROPRIETARY/CONFIDENTIAL.    |
-|  Use is subject to license terms.       Sebastian Sarasti    |
-\--------------------------------------------------------------\
- */
 import java.awt.SplashScreen;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -21,12 +13,6 @@ import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialOceani
 
 import UserInterface.Form.MainForm;
 import UserInterface.Form.SplashScreenForm;
-
-// import BusinessLogic.PersonaBL;
-// import BusinessLogic.UsuarioSistemaBL;
-// import DataAcces.DTO.UsuarioSistemaDTO;
-// import UserInterface.Form.MainForm;
-// import UserInterface.Form.SplashScreenForm;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -50,9 +36,7 @@ public class App {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         ImageIcon icon = new ImageIcon("src\\Resource\\Img\\icono_Ventana.png");
-        // Cambia
-        // la ruta
-        // logo
+
         frame.setIconImage(icon.getImage());
         frame.setSize(688, 700); // Por ejemplo, tamaño de 400x300 píxeles
         frame.setLocationRelativeTo(null);

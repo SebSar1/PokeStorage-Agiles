@@ -52,7 +52,7 @@ public class MainForm extends JPanel {
 
     private void btonCrearCuentaClick() {
 
-        JPanel panerCrear = new JPanel(new GridLayout(4, 2, 5, 5));
+        JPanel panelCrear = new JPanel(new GridLayout(4, 2, 5, 5));
 
         SebLabel lblNombre = new SebLabel("Nombre:");
         JTextField txtNombre = new JTextField(20);
@@ -75,16 +75,16 @@ public class MainForm extends JPanel {
         };
         JComboBox<String> cmbEdad = new JComboBox<>(opcionesEdad);
 
-        panerCrear.add(lblNombre);
-        panerCrear.add(txtNombre);
-        panerCrear.add(lblContraseña);
-        panerCrear.add(txtContraseña);
-        panerCrear.add(lblSexo);
-        panerCrear.add(cmbSexo);
-        panerCrear.add(lblEdad);
-        panerCrear.add(cmbEdad);
+        panelCrear.add(lblNombre);
+        panelCrear.add(txtNombre);
+        panelCrear.add(lblContraseña);
+        panelCrear.add(txtContraseña);
+        panelCrear.add(lblSexo);
+        panelCrear.add(cmbSexo);
+        panelCrear.add(lblEdad);
+        panelCrear.add(cmbEdad);
 
-        int opcion = JOptionPane.showConfirmDialog(null, panerCrear, "Crear Usuario", JOptionPane.OK_CANCEL_OPTION);
+        int opcion = JOptionPane.showConfirmDialog(null, panelCrear, "Crear Usuario", JOptionPane.OK_CANCEL_OPTION);
 
         if (opcion == JOptionPane.OK_OPTION) {
             if (txtNombre.getText().isEmpty() || txtContraseña.getText().isEmpty()) {

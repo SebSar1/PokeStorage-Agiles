@@ -6,8 +6,6 @@ import java.util.List;
 
 public class MochilaPokemon {
 
-    // private static final String ARCHIVO_POKEMONES = "pokemons.txt";
-
     // Guarda los datos del Pokémon en un archivo de texto
     public static void guardarPokemon(String nombre, int poder, String ARCHIVO_POKEMONES) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARCHIVO_POKEMONES + ".txt", true))) {

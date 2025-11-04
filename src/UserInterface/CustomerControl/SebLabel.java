@@ -1,10 +1,3 @@
-/**
-/*-------------------------------------------------------------\
-|  Copyright (©) 2K24 EPN-FIS. All rights reserved.            |
-|  sebastian.sarasti01@epn.edu.ec PROPRIETARY/CONFIDENTIAL.    |
-|  Use is subject to license terms.       Sebastian Sarasti    |
-\--------------------------------------------------------------\
- */
 package UserInterface.CustomerControl;
 
 import java.awt.Color;
@@ -12,7 +5,7 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-// Clase qu define una etiqueta de texto personalizada con estilo infantil
+// Clase que define una etiqueta de texto personalizada con estilo infantil
 public class SebLabel extends JLabel {
 
     private String label = ""; // Texto de la etiqueta

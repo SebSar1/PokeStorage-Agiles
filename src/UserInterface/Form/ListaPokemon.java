@@ -263,9 +263,4 @@ public class ListaPokemon extends JPanel {
         }
     }
 
-    // private ImageIcon cargarImagenPokemon(String nombre) {
-    //     String rutaImagen = "src\\Resource\\Img\\" + nombre.toLowerCase() + ".png";
-    //     return new ImageIcon(rutaImagen);
-    // }
-    
 }
