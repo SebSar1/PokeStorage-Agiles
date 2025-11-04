@@ -259,3 +259,5 @@ public class PokeStoragePanel extends JPanel {
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }
+
+// GM-14 Implementación Manejo de sesión actual

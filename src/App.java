@@ -44,3 +44,5 @@ public class App {
 
     }
 }
+
+// GM-14 Implementación Manejo de sesión actual
