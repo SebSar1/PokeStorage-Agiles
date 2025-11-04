@@ -143,3 +143,5 @@ public class UsuarioDao extends SQLiteDataHelper implements IDAO<UsuarioDTO> {
         }
     }
 }
+
+// GM-9 subtarea: GM-10 Guardar nuevo usuario
