@@ -171,3 +171,4 @@ public class MainForm extends JPanel {
 // GM-4 subtarea: GM-8 Validación de campos del formulario
 
 // GM-4 Formulario registro
+
