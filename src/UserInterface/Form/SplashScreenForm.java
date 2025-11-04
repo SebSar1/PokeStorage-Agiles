@@ -40,3 +40,5 @@ public abstract class SplashScreenForm {
         frmSplash.setVisible(false);
     }
 }
+
+// GM-50 Implementar splash screen
