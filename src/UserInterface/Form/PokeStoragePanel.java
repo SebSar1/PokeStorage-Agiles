@@ -269,6 +269,8 @@ public class PokeStoragePanel extends JPanel {
 // GM-34 subtarea: GM-36 Controla tope de especies
 // GM-34 Logica de guardado
 
+// GM-47 Insercción de registro
+
 // GM-14 Implementación Manejo de sesión actual
 
 // GM-46 Implementar un arbol AVL
