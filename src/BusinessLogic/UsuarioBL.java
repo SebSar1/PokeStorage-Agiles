@@ -53,6 +53,9 @@ public class UsuarioBL {
         return pDAO.delete(idUsuario);
     }
 }
+
+// GM-43 Implementar clase pila
+
 // GM-12 subtarea: GM-13 Leer Usuario y verificar contraseña
 
 // GM-9 subtarea: GM-10 Guardar nuevo usuario
