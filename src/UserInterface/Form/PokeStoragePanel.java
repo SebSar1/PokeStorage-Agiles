@@ -260,6 +260,8 @@ public class PokeStoragePanel extends JPanel {
     }
 }
 
+// GM-34 Logica de guardado
+
 // GM-14 Implementación Manejo de sesión actual
 
 // GM-46 Implementar un arbol AVL

@@ -61,3 +61,5 @@ public class MochilaPokemon {
         }
     }
 }
+
+// GM-34 Logica de guardado
