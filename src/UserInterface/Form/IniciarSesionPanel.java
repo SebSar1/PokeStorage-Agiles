@@ -24,6 +24,7 @@ public class IniciarSesionPanel extends JPanel {
 
     private JTextField usuarioField;
     private JPasswordField passwordField;
+    private SebButton loginButton;
     private Image backgroundImage;
     private SebButton btnRegresar;
 
