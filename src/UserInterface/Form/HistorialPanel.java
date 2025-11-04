@@ -202,3 +202,5 @@ public class HistorialPanel extends JPanel {
         }
     }
 }
+
+// GM-44 Cargar historial
