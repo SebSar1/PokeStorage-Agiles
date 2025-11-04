@@ -54,4 +54,4 @@ public class UsuarioBL {
     }
 }
 
-// GM-13 Leer Usuario y verificar contraseña
+// GM-12 subtarea: GM-13 Leer Usuario y verificar contraseña
