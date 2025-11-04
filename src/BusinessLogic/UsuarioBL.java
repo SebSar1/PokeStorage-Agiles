@@ -55,4 +55,5 @@ public class UsuarioBL {
 }
 // GM-12 subtarea: GM-13 Leer Usuario y verificar contraseña
 // GM-9 subtarea: GM-10 Guardar nuevo usuario
+
 // GM-9 subtarea: GM-11 Manejo de error si un usuario ya existe
