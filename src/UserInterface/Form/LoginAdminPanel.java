@@ -349,4 +349,5 @@ public class LoginAdminPanel extends JPanel {
 }
 
 // GM-15 Implementación Pruebas de inicio de sesión
+
 // GM-46 Implementar un arbol AVL
