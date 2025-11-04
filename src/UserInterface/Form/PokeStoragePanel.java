@@ -262,6 +262,7 @@ public class PokeStoragePanel extends JPanel {
 
 // GM-30 subtarea: GM-31 campos
 // GM-30 subtarea: GM-32 validacion campos
+// GM-30 subtarea: GM-33 pruebas de interfaz
 
 // GM-34 subtarea: GM-35 Logica de guardado
 // GM-34 subtarea: GM-36 Controla tope de especies
