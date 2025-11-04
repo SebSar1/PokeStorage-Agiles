@@ -165,3 +165,4 @@ public class MainForm extends JPanel {
 
 // GM-15 Implementación Pruebas de inicio de sesión
 // GM-9 subtarea: GM-11 Manejo de error si un usuario ya existe
+// GM-4 subtarea: GM-7 Diseño visual

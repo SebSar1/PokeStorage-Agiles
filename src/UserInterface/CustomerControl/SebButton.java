@@ -88,3 +88,5 @@ public class SebButton extends JButton implements MouseListener {
     public void mouseReleased(MouseEvent e) {
     }
 }
+
+// GM-4 subtarea: GM-7 Diseño visual

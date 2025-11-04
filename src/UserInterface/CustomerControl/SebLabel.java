@@ -56,3 +56,5 @@ public class SebLabel extends JLabel {
         setBackground(null); // Establece el fondo de la etiqueta como transparente
     }
 }
+
+// GM-4 subtarea: GM-7 Diseño visual
