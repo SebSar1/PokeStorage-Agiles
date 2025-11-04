@@ -142,3 +142,5 @@ public class IniciarSesionPanel extends JPanel {
         g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
     }
 }
+
+// GM-13 Leer Usuario y verificar contraseña

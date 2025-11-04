@@ -53,3 +53,5 @@ public class UsuarioBL {
         return pDAO.delete(idUsuario);
     }
 }
+
+// GM-13 Leer Usuario y verificar contraseña
