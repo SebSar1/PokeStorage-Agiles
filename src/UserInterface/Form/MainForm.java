@@ -163,6 +163,8 @@ public class MainForm extends JPanel {
     }
 }
 
+// GM-51 Implementa pantalla principal
+
 // GM-15 Implementación Pruebas de inicio de sesión
 
 // GM-9 subtarea: GM-11 Manejo de error si un usuario ya existe
@@ -172,4 +174,3 @@ public class MainForm extends JPanel {
 // GM-4 subtarea: GM-8 Validación de campos del formulario
 
 // GM-4 Formulario registro
-
