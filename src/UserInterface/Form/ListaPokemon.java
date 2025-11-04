@@ -264,3 +264,5 @@ public class ListaPokemon extends JPanel {
     }
 
 }
+
+// GM-55 Implementar fallback para carga de imágenes
