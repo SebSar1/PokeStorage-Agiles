@@ -264,6 +264,9 @@ public class ListaPokemon extends JPanel {
     }
 
 }
+
+// GM-39 Metodo insertar y recorrer
+
 // GM-55 Implementar fallback para carga de imágenes
 
 // GM-38 Clase lista y metodos
