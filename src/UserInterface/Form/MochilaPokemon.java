@@ -63,4 +63,5 @@ public class MochilaPokemon {
 }
 
 // GM-34 subtarea: GM-35 Logica de guardado
+// GM-34 subtarea: GM-36 Controla tope de especies
 // GM-34 Logica de guardado
