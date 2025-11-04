@@ -45,6 +45,8 @@ public class App {
     }
 }
 
+// GM-52 Navegacion fluida entre paneles de la aplicacion
+
 // GM-12 subtarea: GM-14 Implementación Manejo de sesión actual
 
 // GM-50 Implementar splash screen
