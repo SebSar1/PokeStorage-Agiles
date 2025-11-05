@@ -102,3 +102,6 @@ El sistema es una aplicación de escritorio desarrollada en Java, compuesta por:
 | **CU06** | Visualizar historial | Muestra Pokémon eliminados o registrados. | RF05 |
 | **CU07** | Visualizar árbol AVL | Muestra jerarquía por poder. | RF07 |
 
+### **6.2 Diagrama Casos de uso**
+<img width="623" height="547" alt="DiagramaPokeStorage" src="https://github.com/user-attachments/assets/e81b145d-08a8-45c9-acfd-f68ea1ef919d" />
+
