@@ -9,7 +9,7 @@
 - **Metodología:** Modelo Tradicional Basado en Prototipos  
 - **Herramienta de Gestión:** Jira Software  
 - **Repositorio:** [PokeStorage-Agiles](https://github.com/SebSar1/PokeStorage-Agiles/tree/main)
-
+---
 
 ## **2. Introducción**
 
@@ -35,6 +35,13 @@ El sistema PokeStorage permitirá:
 - **Jira:** herramienta de gestión de tareas y documentación utilizada para seguimiento de fases.
 - **Actor:** entidad (usuario o sistema) que interactúa con el software.
 
+---
+
+
+
+
+
+
 ## **3. Descripción general**
 
 ### **3.1 Perspectiva del sistema**
@@ -51,7 +58,8 @@ El sistema es una aplicación de escritorio desarrollada en Java, compuesta por:
 - Librerías Swing disponibles.
 - Los datos se almacenan de forma local.
 
-## **3. Requisitos funcionales**
+---
+## **4. Requisitos funcionales**
 
 | ID | Nombre | Descripción | Prioridad | Jira Issue |
 |----|---------|--------------|------------|-------------|
@@ -64,7 +72,8 @@ El sistema es una aplicación de escritorio desarrollada en Java, compuesta por:
 | **RF07** | Visualización con árbol AVL | Permite clasificar Pokémon por poder utilizando un árbol AVL. | Media | GM-45 |
 | **RF08** | Interfaz visual con imágenes | La interfaz mostrará imágenes, botones y mensajes de error o confirmación. | Media | GM-53 |
 
-## **4. Requisitos no funcionales**
+---
+## **5. Requisitos no funcionales**
 
 | ID | Categoría | Descripción | Prioridad |
 |----|------------|-------------|-----------|
@@ -73,14 +82,16 @@ El sistema es una aplicación de escritorio desarrollada en Java, compuesta por:
 | **RNF03** | Compatibilidad | El software debe ejecutarse en cualquier equipo con Java 11+. | Alta |
 | **RNF04** | Persistencia | Los datos deben guardarse automáticamente tras cada cambio. | Alta |
 
-## **5. Actores y casos de uso**
+---
+
+## **6. Actores y casos de uso**
 
 | Actor | Descripción | Casos de uso asociados |
 |--------|--------------|------------------------|
 | **Usuario (Entrenador)** | Persona que usa la aplicación para almacenar y ver sus Pokémon. | CU01–CU06 |
 | **Sistema** | Software que responde a acciones del usuario. | CU01–CU07 |
 
-### **5.1 Casos de uso principales**
+### **6.1 Casos de uso principales**
 | ID | Nombre | Descripción breve | RF asociado |
 |----|---------|-------------------|-------------|
 | **CU01** | Registrar usuario | Permite crear un nuevo perfil. | RF01 |
